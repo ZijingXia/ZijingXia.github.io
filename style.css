@@ -1,1 +1,588 @@
+/* ================================
+   基础设置
+================================ */
 
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family:
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        "Microsoft YaHei",
+        sans-serif;
+
+    background: #0b0d10;
+    color: #f2f4f7;
+    line-height: 1.6;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button {
+    font-family: inherit;
+}
+
+
+/* ================================
+   顶部个人信息
+================================ */
+
+.hero {
+    min-height: 620px;
+
+    display: flex;
+    align-items: center;
+
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(60, 180, 255, 0.16),
+            transparent 35%
+        ),
+        linear-gradient(
+            135deg,
+            #11151b 0%,
+            #0b0d10 60%,
+            #10151c 100%
+        );
+
+    border-bottom: 1px solid #242a31;
+}
+
+.hero-content {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+
+    gap: 80px;
+    align-items: center;
+}
+
+.hero-text {
+    max-width: 720px;
+}
+
+.eyebrow {
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+
+    color: #4cc9f0;
+
+    margin-bottom: 14px;
+}
+
+.hero h1 {
+    font-size: clamp(54px, 8vw, 96px);
+    line-height: 1;
+
+    letter-spacing: -0.04em;
+
+    margin-bottom: 20px;
+}
+
+.subtitle {
+    font-size: 28px;
+    font-weight: 600;
+
+    color: #d8dee7;
+
+    margin-bottom: 20px;
+}
+
+.description {
+    max-width: 650px;
+
+    font-size: 18px;
+
+    color: #9da7b3;
+
+    margin-bottom: 28px;
+}
+
+
+/* ================================
+   技术标签
+================================ */
+
+.tech-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 10px;
+
+    margin-bottom: 32px;
+}
+
+.tech-tags span,
+.project-tags span {
+    padding: 6px 12px;
+
+    border: 1px solid #303841;
+    border-radius: 5px;
+
+    background: #151a20;
+
+    color: #b9c2cd;
+
+    font-size: 13px;
+}
+
+
+/* ================================
+   链接
+================================ */
+
+.links {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+}
+
+.links a {
+    padding: 10px 18px;
+
+    border: 1px solid #39434e;
+    border-radius: 5px;
+
+    background: #13181e;
+
+    color: #e9edf2;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.links a:hover {
+    background: #1b242d;
+    border-color: #4cc9f0;
+
+    transform: translateY(-2px);
+}
+
+
+/* ================================
+   个人信息卡片
+================================ */
+
+.profile-card {
+    padding: 42px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(28, 35, 43, 0.95),
+            rgba(15, 19, 24, 0.95)
+        );
+
+    border: 1px solid #303841;
+
+    border-radius: 12px;
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.35);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #4cc9f0,
+            #4361ee
+        );
+
+    color: white;
+
+    font-size: 30px;
+    font-weight: 800;
+
+    margin-bottom: 28px;
+}
+
+.profile-card h2 {
+    font-size: 28px;
+    margin-bottom: 18px;
+}
+
+.profile-card p {
+    color: #9da7b3;
+    margin-bottom: 12px;
+}
+
+.status {
+    margin-top: 28px;
+
+    color: #69db7c;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   项目区域
+================================ */
+
+main {
+    width: min(1200px, 90%);
+    margin: 0 auto;
+}
+
+.project-section {
+    padding: 90px 0;
+}
+
+.section-header {
+    display: flex;
+
+    align-items: end;
+    justify-content: space-between;
+
+    margin-bottom: 32px;
+}
+
+.section-header h2 {
+    font-size: 42px;
+
+    letter-spacing: -0.03em;
+}
+
+
+/* ================================
+   滑块按钮
+================================ */
+
+.slider-controls {
+    display: flex;
+    gap: 8px;
+}
+
+.slider-controls button {
+    width: 46px;
+    height: 46px;
+
+    border: 1px solid #343d47;
+    border-radius: 6px;
+
+    background: #14191f;
+
+    color: #e8edf2;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.2s ease,
+        border-color 0.2s ease;
+}
+
+.slider-controls button:hover {
+    background: #202832;
+    border-color: #4cc9f0;
+}
+
+
+/* ================================
+   横向项目滑块
+================================ */
+
+.project-slider {
+    display: flex;
+
+    gap: 22px;
+
+    overflow-x: auto;
+
+    scroll-behavior: smooth;
+
+    scrollbar-width: none;
+
+    padding-bottom: 12px;
+}
+
+.project-slider::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* ================================
+   项目卡片
+================================ */
+
+.project-card {
+    flex: 0 0 360px;
+
+    overflow: hidden;
+
+    background: #13181e;
+
+    border: 1px solid #2b333c;
+
+    border-radius: 10px;
+
+    transition:
+        transform 0.25s ease,
+        border-color 0.25s ease,
+        box-shadow 0.25s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-6px);
+
+    border-color: #4cc9f0;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.35);
+}
+
+
+/* ================================
+   视频区域
+================================ */
+
+.video-placeholder {
+    height: 210px;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 10px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #171d24,
+            #0d1115
+        );
+
+    color: #687481;
+
+    font-size: 11px;
+
+    letter-spacing: 0.18em;
+}
+
+.play-button {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    border: 1px solid #4cc9f0;
+
+    color: #4cc9f0;
+
+    font-size: 20px;
+
+    transition:
+        background 0.2s ease,
+        transform 0.2s ease;
+}
+
+.project-card:hover .play-button {
+    background: rgba(76, 201, 240, 0.12);
+
+    transform: scale(1.08);
+}
+
+
+/* ================================
+   项目信息
+================================ */
+
+.project-info {
+    padding: 26px;
+}
+
+.project-number {
+    color: #4cc9f0;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    letter-spacing: 0.12em;
+
+    margin-bottom: 12px;
+}
+
+.project-info h3 {
+    font-size: 24px;
+
+    line-height: 1.2;
+
+    margin-bottom: 14px;
+}
+
+.project-info p {
+    color: #929daa;
+
+    font-size: 14px;
+
+    min-height: 68px;
+
+    margin-bottom: 20px;
+}
+
+
+/* ================================
+   项目标签
+================================ */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 7px;
+}
+
+.project-tags span {
+    font-size: 11px;
+
+    padding: 4px 9px;
+}
+
+
+/* ================================
+   Footer
+================================ */
+
+footer {
+    width: min(1200px, 90%);
+
+    margin: 0 auto;
+
+    padding: 35px 0 50px;
+
+    border-top: 1px solid #242a31;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #6f7985;
+
+    font-size: 13px;
+}
+
+footer a {
+    color: #9da7b3;
+}
+
+footer a:hover {
+    color: #4cc9f0;
+}
+
+
+/* ================================
+   手机端
+================================ */
+
+@media (max-width: 800px) {
+
+    .hero {
+        min-height: auto;
+
+        padding: 90px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+    }
+
+    .profile-card {
+        padding: 30px;
+    }
+
+    .section-header {
+        align-items: start;
+
+        gap: 20px;
+    }
+
+    .section-header h2 {
+        font-size: 34px;
+    }
+
+    .project-card {
+        flex-basis: 82vw;
+    }
+
+}
+
+
+/* ================================
+   小屏幕
+================================ */
+
+@media (max-width: 500px) {
+
+    main,
+    footer {
+        width: 88%;
+    }
+
+    .hero-content {
+        width: 88%;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    .subtitle {
+        font-size: 22px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    .section-header {
+        flex-direction: column;
+    }
+
+    .project-card {
+        flex-basis: 86vw;
+    }
+
+}
