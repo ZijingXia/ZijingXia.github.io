@@ -12,81 +12,156 @@
 <body>
 
     <!-- ==================== 个人信息 ==================== -->
-    <header class="hero">
+   <header class="hero">
 
-        <div class="hero-content">
+    <div class="hero-content">
 
-            <div class="hero-text">
+        <!-- ==================== 左侧项目视频 ==================== -->
 
-                <p class="eyebrow">GAME CLIENT DEVELOPER</p>
+        <div class="showcase">
 
-                <h1>Zijing Xia</h1>
+            <div class="showcase-video">
 
-                <p class="subtitle">
-                    Game Client Developer
-                </p>
+                <!--
+                    当前项目的视频
+                    后面把 src 换成你的实际视频文件
+                -->
 
-                <p class="description">
-                    Unreal Engine game developer focused on gameplay systems,
-                    C++, AI and LLM-driven game development.
-                </p>
+                <video
+                    id="showcase-video"
+                    autoplay
+                    muted
+                    loop
+                    playsinline>
+                </video>
 
-                <div class="tech-tags">
-                    <span>UE5</span>
-                    <span>C++</span>
-                    <span>Blueprint</span>
-                    <span>Gameplay</span>
-                    <span>AI / LLM</span>
-                </div>
+                <div class="video-overlay">
 
-                <div class="links">
-                    <a href="https://github.com/ZijingXia"
-                       target="_blank">
-                        GitHub ↗
-                    </a>
+                    <div class="showcase-category"
+                         id="showcase-category">
+                        COURSE PROJECT
+                    </div>
 
-                    <a href="mailto:YOUR_EMAIL@example.com">
-                        Email ↗
-                    </a>
+                    <h1 id="showcase-title">
+                        Loading...
+                    </h1>
 
-                    <a href="#projects">
-                        Projects ↓
-                    </a>
+                    <p id="showcase-description">
+                        Loading project...
+                    </p>
+
+                    <div class="showcase-tags"
+                         id="showcase-tags">
+                    </div>
+
                 </div>
 
             </div>
 
 
-            <div class="profile-card">
+            <!-- 视频切换控制 -->
 
-                <div class="avatar">
-                    ZX
+            <div class="showcase-bottom">
+
+                <div class="showcase-counter">
+
+                    <span id="showcase-current">
+                        01
+                    </span>
+
+                    /
+
+                    <span id="showcase-total">
+                        07
+                    </span>
+
                 </div>
 
-                <h2>About Me</h2>
 
-                <p>
-                    Game Engineering
-                    <br>
-                    University of Warwick
-                </p>
+                <div class="showcase-controls">
 
-                <p>
-                    Network Engineering
-                    <br>
-                    Dalian University of Technology
-                </p>
+                    <button
+                        onclick="changeShowcase(-1)">
+                        ←
+                    </button>
 
-                <div class="status">
-                    ● Open to opportunities
+                    <button
+                        onclick="changeShowcase(1)">
+                        →
+                    </button>
+
                 </div>
 
             </div>
 
         </div>
 
-    </header>
 
+        <!-- ==================== 右侧个人信息 ==================== -->
+
+        <div class="profile-card">
+
+            <div class="avatar">
+                ZX
+            </div>
+
+            <p class="eyebrow">
+                GAME CLIENT DEVELOPER
+            </p>
+
+            <h2>
+                Zijing Xia
+            </h2>
+
+            <p class="profile-title">
+                Game Client Developer
+            </p>
+
+            <div class="profile-divider"></div>
+
+            <p>
+                Game Engineering
+                <br>
+                University of Warwick
+            </p>
+
+            <p>
+                Network Engineering
+                <br>
+                Dalian University of Technology
+            </p>
+
+
+            <div class="profile-skills">
+
+                <span>UE5</span>
+                <span>C++</span>
+                <span>Gameplay</span>
+                <span>AI / LLM</span>
+
+            </div>
+
+
+            <div class="profile-links">
+
+                <a
+                    href="https://github.com/ZijingXia"
+                    target="_blank">
+                    GitHub ↗
+                </a>
+
+                <a
+                    href="mailto:YOUR_EMAIL@example.com">
+                    Email ↗
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
 
     <main id="projects">
 
