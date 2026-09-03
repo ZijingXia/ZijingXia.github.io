@@ -1,67 +1,96 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
+
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <meta
+        name="description"
+        content="Zijing Xia - Game Client Developer Portfolio"
+    >
 
     <title>Zijing Xia | Game Client Developer</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- ==================== 个人信息 ==================== -->
-   <header class="hero">
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<header class="hero">
 
     <div class="hero-content">
 
-        <!-- ==================== 左侧项目视频 ==================== -->
 
-        <div class="showcase">
+        <!-- ================= LEFT : PROJECT SHOWCASE ================= -->
+
+        <section class="showcase">
+
 
             <div class="showcase-video">
-
-                <!--
-                    当前项目的视频
-                    后面把 src 换成你的实际视频文件
-                -->
 
                 <video
                     id="showcase-video"
                     autoplay
                     muted
-                    loop
-                    playsinline>
-                </video>
+                    playsinline
+                ></video>
 
-                <div class="video-overlay">
 
-                    <div class="showcase-category"
-                         id="showcase-category">
-                        COURSE PROJECT
+                <div class="video-gradient"></div>
+
+
+                <div class="showcase-info">
+
+                    <div
+                        class="showcase-category"
+                        id="showcase-category"
+                    >
+                        PROJECT
                     </div>
 
-                    <h1 id="showcase-title">
+
+                    <h1
+                        id="showcase-title"
+                    >
                         Loading...
                     </h1>
 
-                    <p id="showcase-description">
+
+                    <p
+                        id="showcase-description"
+                    >
                         Loading project...
                     </p>
 
-                    <div class="showcase-tags"
-                         id="showcase-tags">
-                    </div>
+
+                    <div
+                        class="showcase-tags"
+                        id="showcase-tags"
+                    ></div>
 
                 </div>
 
             </div>
 
 
-            <!-- 视频切换控制 -->
+            <div class="showcase-control-bar">
 
-            <div class="showcase-bottom">
 
                 <div class="showcase-counter">
 
@@ -69,7 +98,9 @@
                         01
                     </span>
 
-                    /
+                    <span class="counter-separator">
+                        /
+                    </span>
 
                     <span id="showcase-total">
                         07
@@ -81,63 +112,111 @@
                 <div class="showcase-controls">
 
                     <button
-                        onclick="changeShowcase(-1)">
+                        id="previous-project"
+                        aria-label="Previous project"
+                    >
                         ←
                     </button>
 
+
                     <button
-                        onclick="changeShowcase(1)">
+                        id="next-project"
+                        aria-label="Next project"
+                    >
                         →
                     </button>
 
                 </div>
 
+
             </div>
 
-        </div>
+        </section>
 
 
-        <!-- ==================== 右侧个人信息 ==================== -->
 
-        <div class="profile-card">
+        <!-- ================= RIGHT : PERSONAL INFORMATION ================= -->
 
-            <div class="avatar">
-                ZX
+        <aside class="profile-card">
+
+
+            <div class="profile-photo">
+
+                <div class="profile-photo-placeholder">
+                    ZX
+                </div>
+
             </div>
 
-            <p class="eyebrow">
+
+            <div class="profile-role">
                 GAME CLIENT DEVELOPER
-            </p>
+            </div>
+
 
             <h2>
                 Zijing Xia
             </h2>
 
+
             <p class="profile-title">
                 Game Client Developer
             </p>
 
-            <div class="profile-divider"></div>
 
-            <p>
-                Game Engineering
-                <br>
-                University of Warwick
-            </p>
-
-            <p>
-                Network Engineering
-                <br>
-                Dalian University of Technology
-            </p>
+            <div class="profile-line"></div>
 
 
-            <div class="profile-skills">
+            <div class="education">
+
+                <div class="education-item">
+
+                    <span class="education-label">
+                        MSc
+                    </span>
+
+                    <div>
+                        <strong>
+                            Game Engineering
+                        </strong>
+
+                        <span>
+                            University of Warwick
+                        </span>
+                    </div>
+
+                </div>
+
+
+                <div class="education-item">
+
+                    <span class="education-label">
+                        BEng
+                    </span>
+
+                    <div>
+                        <strong>
+                            Network Engineering
+                        </strong>
+
+                        <span>
+                            Dalian University of Technology
+                        </span>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="skill-list">
 
                 <span>UE5</span>
                 <span>C++</span>
                 <span>Gameplay</span>
-                <span>AI / LLM</span>
+                <span>AI</span>
+                <span>LLM</span>
+                <span>Multiplayer</span>
 
             </div>
 
@@ -146,429 +225,565 @@
 
                 <a
                     href="https://github.com/ZijingXia"
-                    target="_blank">
+                    target="_blank"
+                    rel="noopener"
+                >
                     GitHub ↗
                 </a>
 
+
+                <!-- 把下面的邮箱替换成你的真实邮箱 -->
+
                 <a
-                    href="mailto:YOUR_EMAIL@example.com">
+                    href="mailto:YOUR_EMAIL@example.com"
+                >
                     Email ↗
                 </a>
 
             </div>
 
-        </div>
+
+            <div class="availability">
+
+                <span class="status-dot"></span>
+
+                Open to opportunities
+
+            </div>
+
+
+        </aside>
 
     </div>
 
 </header>
 
-    <main id="projects">
 
 
-        <!-- ==================== 课程项目 ==================== -->
+<!-- =========================================================
+     PROJECTS
+========================================================= -->
 
-        <section class="project-section">
+<main id="projects">
 
-            <div class="section-header">
 
-                <div>
-                    <p class="eyebrow">COURSEWORK</p>
-                    <h2>课程项目</h2>
+    <!-- =====================================================
+         COURSE PROJECTS
+    ====================================================== -->
+
+    <section class="project-section">
+
+
+        <div class="section-header">
+
+
+            <div>
+
+                <div class="section-eyebrow">
+                    COURSEWORK
                 </div>
 
-                <div class="slider-controls">
-
-                    <button
-                        onclick="slide('course-slider', -1)">
-                        ←
-                    </button>
-
-                    <button
-                        onclick="slide('course-slider', 1)">
-                        →
-                    </button>
-
-                </div>
+                <h2>
+                    课程项目
+                </h2>
 
             </div>
 
 
-            <div
-                class="project-slider"
-                id="course-slider">
+            <div class="slider-buttons">
+
+                <button
+                    data-slider="course-slider"
+                    data-direction="-1"
+                >
+                    ←
+                </button>
 
 
-                <!-- 项目 1 -->
-
-                <article class="project-card">
-
-                    <div class="video-placeholder">
-
-                        <div class="play-button">
-                            ▶
-                        </div>
-
-                        <span>
-                            PROJECT VIDEO
-                        </span>
-
-                    </div>
-
-                    <div class="project-info">
-
-                        <div class="project-number">
-                            COURSE PROJECT · 01
-                        </div>
-
-                        <h3>
-                            GE Game Engine Development
-                        </h3>
-
-                        <p>
-                            Game engine development project exploring
-                            engine architecture and real-time rendering.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>C++</span>
-                            <span>Game Engine</span>
-                            <span>Rendering</span>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 项目 2 -->
-
-                <article class="project-card">
-
-                    <div class="video-placeholder">
-
-                        <div class="play-button">
-                            ▶
-                        </div>
-
-                        <span>
-                            PROJECT VIDEO
-                        </span>
-
-                    </div>
-
-                    <div class="project-info">
-
-                        <div class="project-number">
-                            COURSE PROJECT · 02
-                        </div>
-
-                        <h3>
-                            Rasterizer
-                        </h3>
-
-                        <p>
-                            Software rasterization project implementing
-                            a rendering pipeline from fundamental graphics concepts.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>C++</span>
-                            <span>Graphics</span>
-                            <span>Rasterization</span>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 项目 3 -->
-
-                <article class="project-card">
-
-                    <div class="video-placeholder">
-
-                        <div class="play-button">
-                            ▶
-                        </div>
-
-                        <span>
-                            PROJECT VIDEO
-                        </span>
-
-                    </div>
-
-                    <div class="project-info">
-
-                        <div class="project-number">
-                            COURSE PROJECT · 03
-                        </div>
-
-                        <h3>
-                            ChatRoom
-                        </h3>
-
-                        <p>
-                            Network programming project covering
-                            client-server communication and real-time interaction.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>C++</span>
-                            <span>Networking</span>
-                            <span>Client / Server</span>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-                <!-- 项目 4 -->
-
-                <article class="project-card">
-
-                    <div class="video-placeholder">
-
-                        <div class="play-button">
-                            ▶
-                        </div>
-
-                        <span>
-                            PROJECT VIDEO
-                        </span>
-
-                    </div>
-
-                    <div class="project-info">
-
-                        <div class="project-number">
-                            COURSE PROJECT · 04
-                        </div>
-
-                        <h3>
-                            Multiplayer Game
-                        </h3>
-
-                        <p>
-                            Multiplayer game development project exploring
-                            networking, replication and gameplay systems.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>UE5</span>
-                            <span>Networking</span>
-                            <span>Gameplay</span>
-                        </div>
-
-                    </div>
-
-                </article>
+                <button
+                    data-slider="course-slider"
+                    data-direction="1"
+                >
+                    →
+                </button>
 
             </div>
 
-        </section>
+
+        </div>
 
 
 
-        <!-- ==================== 游戏项目 ==================== -->
+        <div
+            class="project-slider"
+            id="course-slider"
+        >
 
-        <section class="project-section">
 
-            <div class="section-header">
+            <!-- ================= 01 ================= -->
 
-                <div>
-                    <p class="eyebrow">
-                        COLLABORATION & RESEARCH
+            <article class="project-card">
+
+
+                <div class="project-video">
+
+                    <video
+                        src="videos/8bit.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+
+                    <div class="video-play">
+                        ▶
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-type">
+                        COURSE PROJECT · 01
+                    </div>
+
+                    <h3>
+                        8-bit Game
+                    </h3>
+
+                    <p>
+                        8-bit game developed with the teaching Game Engine,
+                        covering fundamental game development and gameplay systems.
                     </p>
 
-                    <h2>
-                        游戏项目
-                    </h2>
-                </div>
 
-                <div class="slider-controls">
+                    <div class="project-tags">
 
-                    <button
-                        onclick="slide('game-slider', -1)">
-                        ←
-                    </button>
+                        <span>C++</span>
+                        <span>Game Engine</span>
+                        <span>Gameplay</span>
 
-                    <button
-                        onclick="slide('game-slider', 1)">
-                        →
-                    </button>
+                    </div>
 
                 </div>
+
+            </article>
+
+
+
+            <!-- ================= 02 ================= -->
+
+            <article class="project-card">
+
+
+                <div class="project-video">
+
+                    <video
+                        src="videos/3d-game.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+
+                    <div class="video-play">
+                        ▶
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-type">
+                        COURSE PROJECT · 02
+                    </div>
+
+                    <h3>
+                        3D Game
+                    </h3>
+
+                    <p>
+                        3D game developed using C++ rendering techniques
+                        and the teaching Game Engine.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>C++</span>
+                        <span>3D</span>
+                        <span>Rendering</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ================= 03 ================= -->
+
+            <article class="project-card">
+
+
+                <div class="project-video">
+
+                    <video
+                        src="videos/chatroom.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+
+                    <div class="video-play">
+                        ▶
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-type">
+                        COURSE PROJECT · 03
+                    </div>
+
+                    <h3>
+                        ChatRoom
+                    </h3>
+
+                    <p>
+                        Online chat system implementing client-server
+                        communication and real-time interaction.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>C++</span>
+                        <span>Networking</span>
+                        <span>Client / Server</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ================= 04 ================= -->
+
+            <article class="project-card">
+
+
+                <div class="project-video">
+
+                    <video
+                        src="videos/rasterizer.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+
+                    <div class="video-play">
+                        ▶
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-type">
+                        COURSE PROJECT · 04
+                    </div>
+
+                    <h3>
+                        Rasterizer
+                    </h3>
+
+                    <p>
+                        Software rasterization project exploring
+                        graphics pipelines and rendering fundamentals.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>C++</span>
+                        <span>Graphics</span>
+                        <span>Rasterization</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =====================================================
+         GAME PROJECTS
+    ====================================================== -->
+
+    <section class="project-section">
+
+
+        <div class="section-header">
+
+
+            <div>
+
+                <div class="section-eyebrow">
+                    COLLABORATION & RESEARCH
+                </div>
+
+                <h2>
+                    游戏项目
+                </h2>
 
             </div>
 
 
-            <div
-                class="project-slider"
-                id="game-slider">
+            <div class="slider-buttons">
+
+                <button
+                    data-slider="game-slider"
+                    data-direction="-1"
+                >
+                    ←
+                </button>
 
 
-                <!-- SkyFire -->
-
-                <article class="project-card featured">
-
-                    <div class="video-placeholder">
-
-                        <div class="play-button">
-                            ▶
-                        </div>
-
-                        <span>
-                            PROJECT VIDEO
-                        </span>
-
-                    </div>
-
-                    <div class="project-info">
-
-                        <div class="project-number">
-                            COLLABORATIVE PROJECT · 01
-                        </div>
-
-                        <h3>
-                            SkyFire-Uprise
-                        </h3>
-
-                        <p>
-                            UE5.4 multi-level shooter.
-                            Developed the complete controllable player
-                            character and 3C system, while providing
-                            interfaces for enemy, level and UI development.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>UE5.4</span>
-                            <span>C++</span>
-                            <span>3C</span>
-                            <span>Gameplay</span>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- LLM DDA -->
-
-                <article class="project-card featured">
-
-                    <div class="video-placeholder">
-
-                        <div class="play-button">
-                            ▶
-                        </div>
-
-                        <span>
-                            PROJECT VIDEO
-                        </span>
-
-                    </div>
-
-                    <div class="project-info">
-
-                        <div class="project-number">
-                            RESEARCH PROJECT · 02
-                        </div>
-
-                        <h3>
-                            LLM-Driven Dynamic Difficulty
-                        </h3>
-
-                        <p>
-                            Unreal Engine tower defense research project
-                            using LLM-driven player threat modeling
-                            to enable dynamic difficulty adjustment.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>UE5</span>
-                            <span>LLM</span>
-                            <span>DDA</span>
-                            <span>AI</span>
-                        </div>
-
-                    </div>
-
-                </article>
-
-
-
-                <!-- Spiranke -->
-
-                <article class="project-card featured">
-
-                    <div class="video-placeholder">
-
-                        <div class="play-button">
-                            ▶
-                        </div>
-
-                        <span>
-                            PROJECT VIDEO
-                        </span>
-
-                    </div>
-
-                    <div class="project-info">
-
-                        <div class="project-number">
-                            PERSONAL PROJECT · 03
-                        </div>
-
-                        <h3>
-                            Spiranke Game
-                        </h3>
-
-                        <p>
-                            Unreal Engine game project exploring
-                            gameplay systems, enemy AI,
-                            multiplayer architecture and technical implementation.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>UE5</span>
-                            <span>C++</span>
-                            <span>AI</span>
-                            <span>Multiplayer</span>
-                        </div>
-
-                    </div>
-
-                </article>
+                <button
+                    data-slider="game-slider"
+                    data-direction="1"
+                >
+                    →
+                </button>
 
             </div>
 
-        </section>
 
-    </main>
-
-
-    <footer>
-
-        <p>
-            © 2026 Zijing Xia
-        </p>
-
-        <a
-            href="https://github.com/ZijingXia"
-            target="_blank">
-
-            GitHub ↗
-
-        </a>
-
-    </footer>
+        </div>
 
 
-    <script src="script.js"></script>
+
+        <div
+            class="project-slider"
+            id="game-slider"
+        >
+
+
+            <!-- ================= SKYFIRE ================= -->
+
+            <article class="project-card">
+
+
+                <div class="project-video">
+
+                    <video
+                        src="videos/skyfire.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+
+                    <div class="video-play">
+                        ▶
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-type">
+                        COLLABORATIVE PROJECT · 01
+                    </div>
+
+                    <h3>
+                        SkyFire-Uprise
+                    </h3>
+
+                    <p>
+                        UE5.4 third-person space shooter.
+                        Developed the complete controllable character
+                        and 3C system.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>UE5.4</span>
+                        <span>C++</span>
+                        <span>3C</span>
+                        <span>Gameplay</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ================= LLM DDA ================= -->
+
+            <article class="project-card">
+
+
+                <div class="project-video">
+
+                    <video
+                        src="videos/llm-dda.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+
+                    <div class="video-play">
+                        ▶
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-type">
+                        RESEARCH PROJECT · 02
+                    </div>
+
+                    <h3>
+                        LLM-Driven Dynamic Difficulty
+                    </h3>
+
+                    <p>
+                        UE5 tower defense project using LLM-driven
+                        player threat modeling for dynamic difficulty adjustment.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>UE5</span>
+                        <span>LLM</span>
+                        <span>DDA</span>
+                        <span>AI</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+
+            <!-- ================= SPIRANKE ================= -->
+
+            <article class="project-card">
+
+
+                <div class="project-video">
+
+                    <video
+                        src="videos/spiranke.mp4"
+                        muted
+                        loop
+                        playsinline
+                        preload="metadata"
+                    ></video>
+
+
+                    <div class="video-play">
+                        ▶
+                    </div>
+
+                </div>
+
+
+                <div class="project-content">
+
+                    <div class="project-type">
+                        PERSONAL PROJECT · 03
+                    </div>
+
+                    <h3>
+                        Spiranke Game
+                    </h3>
+
+                    <p>
+                        Unreal Engine game project exploring
+                        gameplay systems, enemy AI and multiplayer architecture.
+                    </p>
+
+
+                    <div class="project-tags">
+
+                        <span>UE5</span>
+                        <span>C++</span>
+                        <span>AI</span>
+                        <span>Multiplayer</span>
+
+                    </div>
+
+                </div>
+
+            </article>
+
+
+        </div>
+
+    </section>
+
+</main>
+
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+    <span>
+        © 2026 Zijing Xia
+    </span>
+
+    <a
+        href="https://github.com/ZijingXia"
+        target="_blank"
+        rel="noopener"
+    >
+        GitHub ↗
+    </a>
+
+</footer>
+
+
+
+<script src="script.js"></script>
 
 </body>
+
 </html>
