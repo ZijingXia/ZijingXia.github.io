@@ -1140,3 +1140,133 @@ footer a:hover {
     }
 
 }
+
+/* =========================================================
+   VIDEO MODAL
+========================================================= */
+
+.video-modal {
+    position: fixed;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.88);
+
+    z-index: 9999;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition:
+        opacity 0.25s ease,
+        visibility 0.25s ease;
+}
+
+.video-modal.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* Background */
+
+.video-modal-backdrop {
+    position: absolute;
+    inset: 0;
+
+    cursor: pointer;
+}
+
+
+/* Video container */
+
+.video-modal-content {
+    position: relative;
+
+    width: min(90vw, 1200px);
+    max-height: 90vh;
+
+    z-index: 1;
+
+    transform: scale(0.96);
+
+    transition: transform 0.25s ease;
+}
+
+.video-modal.active .video-modal-content {
+    transform: scale(1);
+}
+
+
+/* Video */
+
+.video-modal-content video {
+    display: block;
+
+    width: 100%;
+    max-height: 85vh;
+
+    object-fit: contain;
+
+    background: #000;
+
+    border-radius: 6px;
+}
+
+
+/* Close button */
+
+.video-modal-close {
+    position: absolute;
+
+    top: -48px;
+    right: 0;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+    background: transparent;
+
+    color: white;
+
+    font-size: 36px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    z-index: 2;
+
+    opacity: 0.8;
+
+    transition:
+        opacity 0.2s ease,
+        transform 0.2s ease;
+}
+
+.video-modal-close:hover {
+    opacity: 1;
+    transform: scale(1.1);
+}
+
+
+/* Mobile */
+
+@media (max-width: 768px) {
+
+    .video-modal-content {
+        width: 94vw;
+    }
+
+    .video-modal-content video {
+        max-height: 75vh;
+    }
+
+    .video-modal-close {
+        top: -44px;
+    }
+
+}
