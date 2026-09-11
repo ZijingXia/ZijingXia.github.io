@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       PROJECT DATA  (hero 与下方卡片一一对应，共 10 支)
+       PROJECT DATA  (hero 与下方卡片逐张一一对应，共 10 支)
     ===================================================== */
 
     const showcaseProjects = [
@@ -52,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "光线追踪、路径追踪、环境光渲染与降噪",
             description:
                 "这是使用教学引擎实现的三种不同的光线追踪算法演示，并添加了 Intel 的 OIDN 集成降噪器。",
-            tags: ["UE5", "C++", "AI", "Multiplayer"],
+            tags: ["ACG", "C++", "Graphics"],
             video: "Video/ACG.mp4"
         },
 
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "SkyFire-Uprise 游戏流程讲解",
             description:
                 "本视频主要讲解的是游戏中玩家的游戏流程，包括如何开始游戏、游戏不同阶段、游戏目标和最后的实机演示。",
-            tags: ["UE5.4", "C++", "3C", "Gameplay"],
+            tags: ["UE5.4", "C++", "Process", "Gameplay"],
             video: "Video/skyfire-2.mp4"
         },
 
@@ -79,16 +79,16 @@ document.addEventListener("DOMContentLoaded", () => {
             title: "LLM-DDA 多人合作塔防玩家 3C 讲解",
             description:
                 "这是一个由单人开发的 UE5 的多人合作塔防，本视频主要讲解的是游戏中玩家的 3C 操作，包括移动、建造、升级和游戏菜单。",
-            tags: ["UE5", "LLM", "DDA", "AI"],
+            tags: ["UE5.4", "AI", "3C"],
             video: "Video/LLM-1.mp4"
         },
 
         {
-            category: "RESEARCH PROJECT",
-            title: "LLM-DDA 多人合作塔防多人联机讲解",
+            category: "COLLABORATIVE PROJECT",
+            title: "LLM-DDA多人合作塔防多人联机讲解",
             description:
                 "这个视频主要讲解的是多人合作塔防的多人联机功能，包括如何创建房间、加入房间、玩家之间的同步和游戏状态的管理。",
-            tags: ["UE5.4", "C++", "3C", "Gameplay"],
+            tags: ["UE5.4", "3C", "Gameplay", "Multiplayer"],
             video: "Video/LLM-2.mp4"
         },
 
@@ -96,8 +96,8 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "RESEARCH PROJECT",
             title: "LLM-DDA 多人合作塔防游戏流程与 LLM-DDA 效果讲解",
             description:
-                "这个视频主要讲解的是多人合作塔防的游戏流程，包括游戏的开始、不同阶段的玩法、LLM-DDA 的实机演示效果与最终的游玩结算。",
-            tags: ["UE5", "LLM", "DDA", "AI"],
+                "这个视频主要讲解的是多人合作塔防的游戏流程，包括游戏的开始、不同阶段的玩法、LLM-DDA的实机演示效果与最终的游玩结算。",
+            tags: ["UE5.4", "LLM", "DDA", "AI"],
             video: "Video/LLM-3.mp4"
         }
 
