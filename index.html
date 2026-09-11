@@ -22,6 +22,58 @@
         href="style.css"
     >
 
+    <style>
+    .doc-intro {
+        max-width: 760px;
+        margin: 0 0 26px;
+        font-size: 14px;
+        line-height: 1.75;
+        opacity: .72;
+    }
+    .doc-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 18px;
+    }
+    .doc-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 22px;
+        border-radius: 14px;
+        border: 1px solid rgba(255, 255, 255, .12);
+        background: rgba(255, 255, 255, .04);
+        text-decoration: none;
+        color: inherit;
+        transition: transform .18s ease, border-color .18s ease, background .18s ease;
+    }
+    .doc-card:hover {
+        transform: translateY(-3px);
+        border-color: rgba(255, 255, 255, .3);
+        background: rgba(255, 255, 255, .07);
+    }
+    .doc-badge {
+        align-self: flex-start;
+        font-size: 11px;
+        letter-spacing: .08em;
+        font-weight: 700;
+        padding: 3px 10px;
+        border-radius: 999px;
+    }
+    .doc-badge.skyfire { color: #4ea1ff; background: rgba(78,161,255,.14); }
+    .doc-badge.dda     { color: #ffb454; background: rgba(255,180,84,.14); }
+    .doc-card h3 { font-size: 16px; margin: 0; line-height: 1.4; }
+    .doc-card p  { font-size: 13px; line-height: 1.65; opacity: .72; margin: 0; }
+    .doc-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .doc-tags span {
+        font-size: 11px; padding: 2px 9px; border-radius: 6px;
+        background: rgba(255, 255, 255, .08); opacity: .85;
+    }
+    .doc-cta { margin-top: auto; padding-top: 6px; font-size: 13px; font-weight: 600; color: #4ea1ff; }
+    .doc-card.dda-card .doc-cta { color: #ffb454; }
+</style>
+
+
 </head>
 
 
@@ -229,7 +281,7 @@
                 <!-- 把下面的邮箱替换成你的真实邮箱 -->
 
                 <a
-                    mailto:2046868406@qq.com
+                    href="mailto:2046868406@qq.com"
                 >
                     Email ↗
                 </a>
@@ -864,6 +916,72 @@
         </div>
 
     </section>
+
+    <!-- ============ 设计拆解 ============ -->
+<section class="project-section">
+    <div class="section-header">
+        <div>
+            <div class="section-eyebrow">DESIGN ANALYSIS</div>
+            <h2>设计拆解</h2>
+        </div>
+    </div>
+
+    <p class="doc-intro">
+        两套项目共 6 篇逆向设计文档，按「3C → 流程 → 敌人」同一动线写成：
+        SkyFire 拆的是失重惯性下的动作手感，LLM-DDA 拆的是 LLM 驱动的动态难度。
+        每篇都落实到可调参数与设计取舍，而非玩法描述。
+    </p>
+
+    <div class="doc-grid">
+        <a class="doc-card" href="Article/SkyFire_3C设计拆解.docx" target="_blank" rel="noopener">
+            <span class="doc-badge skyfire">SkyFire</span>
+            <h3>3C 设计拆解</h3>
+            <p>失重惯性下的可控性平衡、12 项手感参数调试表与弹簧臂相机设计。</p>
+            <div class="doc-tags"><span>3C</span><span>Camera</span><span>手感参数</span></div>
+            <div class="doc-cta">阅读文档 ↗</div>
+        </a>
+
+        <a class="doc-card" href="Article/SkyFire_流程设计拆解.docx" target="_blank" rel="noopener">
+            <span class="doc-badge skyfire">SkyFire</span>
+            <h3>流程设计拆解</h3>
+            <p>三段式心流曲线、二阶段「水平线触发」与阶段间手感衔接。</p>
+            <div class="doc-tags"><span>流程</span><span>心流曲线</span><span>Gameplay</span></div>
+            <div class="doc-cta">阅读文档 ↗</div>
+        </a>
+
+        <a class="doc-card" href="Article/SkyFire_敌人设计拆解.docx" target="_blank" rel="noopener">
+            <span class="doc-badge skyfire">SkyFire</span>
+            <h3>敌人设计拆解</h3>
+            <p>四类威胁的三维设计、Boss AoE ≥5s 不可规避反应窗底线。</p>
+            <div class="doc-tags"><span>敌人</span><span>威胁模型</span><span>Boss</span></div>
+            <div class="doc-cta">阅读文档 ↗</div>
+        </a>
+
+        <a class="doc-card dda-card" href="Article/LLM-DDA塔防玩家操作、建造和战斗设计拆解.docx" target="_blank" rel="noopener">
+            <span class="doc-badge dda">LLM-DDA</span>
+            <h3>玩家操作 / 建造 / 战斗设计拆解</h3>
+            <p>玩家 3C 操作、建造升级循环与战斗交互的完整设计闭环。</p>
+            <div class="doc-tags"><span>3C</span><span>建造</span><span>战斗</span></div>
+            <div class="doc-cta">阅读文档 ↗</div>
+        </a>
+
+        <a class="doc-card dda-card" href="Article/LLM-DDA塔防流程与数值设计拆解.docx" target="_blank" rel="noopener">
+            <span class="doc-badge dda">LLM-DDA</span>
+            <h3>流程与数值设计拆解</h3>
+            <p>分段心流节奏、波次缩放公式与关键数值迭代表。</p>
+            <div class="doc-tags"><span>流程</span><span>数值</span><span>波次缩放</span></div>
+            <div class="doc-cta">阅读文档 ↗</div>
+        </a>
+
+        <a class="doc-card dda-card" href="Article/LLM-DDA塔防敌人设计拆解.docx" target="_blank" rel="noopener">
+            <span class="doc-badge dda">LLM-DDA</span>
+            <h3>敌人设计拆解</h3>
+            <p>三维威胁模型、0–7 级决策策略与 LLM 驱动的动态难度（DDA）。</p>
+            <div class="doc-tags"><span>敌人</span><span>DDA</span><span>LLM</span></div>
+            <div class="doc-cta">阅读文档 ↗</div>
+        </a>
+    </div>
+</section>
 
 
 </main>
