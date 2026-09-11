@@ -6,7 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     /* =====================================================
-       PROJECT DATA
+       PROJECT DATA  (hero 与下方卡片一一对应，共 10 支)
     ===================================================== */
 
     const showcaseProjects = [
@@ -15,63 +15,90 @@ document.addEventListener("DOMContentLoaded", () => {
             category: "COURSE PROJECT",
             title: "8-bit Game",
             description:
-                "8-bit game developed with the teaching Game Engine, covering fundamental game development and gameplay systems.",
+                "这是一款 2D 平面的英雄生存游戏，操作手感与玩法类似 8-bit 游戏，使用教学引擎 GamesEngineeringBase 制作。",
             tags: ["C++", "Game Engine", "Gameplay"],
-            video: "Video/GEA.mp4"
+            video: "Video/8-bit.mp4"
         },
 
         {
             category: "COURSE PROJECT",
             title: "3D Game",
             description:
-                "3D game developed using C++ rendering techniques and the teaching Game Engine.",
-            tags: ["C++", "3D", "Rendering"],
-            video: "Video/GEDD.mp4"
+                "这是一款第一人称射击游戏，使用教学引擎 GamesEngineeringBase 制作，主要展示了动作优先级设计和 3D 游戏的渲染、交互与碰撞检测。",
+            tags: ["C++", "3D", "Rendering", "Priority"],
+            video: "Video/3D.mp4"
         },
 
         {
             category: "COURSE PROJECT",
-            title: "ChatRoom",
+            title: "ChatRoom-聊天室",
             description:
-                "Online chat system implementing client-server communication and real-time interaction.",
+                "这是一个用开源 UI 模板 imgui 结合教学引擎制作的在线多人聊天室，主要展示了 TCP/IP 协议的使用，以及服务器和客户端的交互设计。",
             tags: ["C++", "Networking", "Client / Server"],
             video: "Video/chatroom.mp4"
         },
 
         {
             category: "COURSE PROJECT",
-            title: "Rasterizer",
+            title: "光栅化与多线程优化",
             description:
-                "Software rasterization project exploring graphics pipelines and rendering fundamentals.",
+                "这是一个渲染的光栅化实现项目，使用多线程优化提高渲染效率。",
             tags: ["C++", "Graphics", "Rasterization"],
             video: "Video/Raster.mp4"
         },
 
         {
-            category: "COLLABORATIVE PROJECT",
-            title: "SkyFire-Uprise",
+            category: "PERSONAL PROJECT",
+            title: "光线追踪、路径追踪、环境光渲染与降噪",
             description:
-                "UE5.4 third-person space shooter. Developed the complete controllable character and 3C system.",
+                "这是使用教学引擎实现的三种不同的光线追踪算法演示，并添加了 Intel 的 OIDN 集成降噪器。",
+            tags: ["UE5", "C++", "AI", "Multiplayer"],
+            video: "Video/ACG.mp4"
+        },
+
+        {
+            category: "COLLABORATIVE PROJECT",
+            title: "SkyFire-Uprise 游戏 3C 讲解",
+            description:
+                "这是使用 UE5 引擎合作开发的第三人称太空射击竞速游戏，本视频主要讲解的是游戏中玩家的 3C 操作。",
             tags: ["UE5.4", "C++", "3C", "Gameplay"],
-            video: "Video/SkyFire.mp4"
+            video: "Video/skyfire-1.mp4"
+        },
+
+        {
+            category: "COLLABORATIVE PROJECT",
+            title: "SkyFire-Uprise 游戏流程讲解",
+            description:
+                "本视频主要讲解的是游戏中玩家的游戏流程，包括如何开始游戏、游戏不同阶段、游戏目标和最后的实机演示。",
+            tags: ["UE5.4", "C++", "3C", "Gameplay"],
+            video: "Video/skyfire-2.mp4"
         },
 
         {
             category: "RESEARCH PROJECT",
-            title: "LLM-Driven Dynamic Difficulty",
+            title: "LLM-DDA 多人合作塔防玩家 3C 讲解",
             description:
-                "UE5 tower defense project using LLM-driven player threat modeling for dynamic difficulty adjustment.",
+                "这是一个由单人开发的 UE5 的多人合作塔防，本视频主要讲解的是游戏中玩家的 3C 操作，包括移动、建造、升级和游戏菜单。",
             tags: ["UE5", "LLM", "DDA", "AI"],
-            video: "Video/Game.mp4"
+            video: "Video/LLM-1.mp4"
         },
 
         {
-            category: "PERSONAL PROJECT",
-            title: "ACG",
+            category: "RESEARCH PROJECT",
+            title: "LLM-DDA 多人合作塔防多人联机讲解",
             description:
-                "Unreal Engine game project exploring gameplay systems, enemy AI and multiplayer architecture.",
-            tags: ["UE5", "C++", "AI", "Multiplayer"],
-            video: "Video/ACG.mp4"
+                "这个视频主要讲解的是多人合作塔防的多人联机功能，包括如何创建房间、加入房间、玩家之间的同步和游戏状态的管理。",
+            tags: ["UE5.4", "C++", "3C", "Gameplay"],
+            video: "Video/LLM-2.mp4"
+        },
+
+        {
+            category: "RESEARCH PROJECT",
+            title: "LLM-DDA 多人合作塔防游戏流程与 LLM-DDA 效果讲解",
+            description:
+                "这个视频主要讲解的是多人合作塔防的游戏流程，包括游戏的开始、不同阶段的玩法、LLM-DDA 的实机演示效果与最终的游玩结算。",
+            tags: ["UE5", "LLM", "DDA", "AI"],
+            video: "Video/LLM-3.mp4"
         }
 
     ];
@@ -192,6 +219,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
         showcaseVideo.pause();
 
+        showcaseVideo.loop = true;   // 短片短于停留期也不冻结
+
         showcaseVideo.src =
             project.video;
 
@@ -276,8 +305,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     function restartShowcaseTimer() {
-
-        clearInterval(showcaseTimer);
 
         startShowcaseTimer();
 
